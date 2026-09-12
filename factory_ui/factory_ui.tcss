@@ -1,0 +1,138 @@
+Screen {
+    layout: vertical;
+}
+
+#header {
+    height: 3;
+    padding: 0 1;
+    background: $boost;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+
+#pipeline {
+    height: 14;
+}
+
+.stage {
+    height: 14;
+    border: round $foreground-disabled;
+    padding: 0;
+    border-title-align: left;
+    border-subtitle-align: right;
+}
+
+.stage.-dark {
+    color: $foreground-disabled;
+}
+
+.stage.-idle {
+    border: round $foreground;
+}
+
+.stage.-blocked {
+    border: round $warning;
+}
+
+.stage.-live {
+    border: round ansi_bright_cyan;
+}
+
+.stage.-proven {
+    border: round $success;
+}
+
+.stage.-failed {
+    border: round $error;
+}
+
+.stage.-focused {
+    background: $boost;
+}
+
+.stage.-focused.-dark { border: heavy $foreground-disabled; }
+.stage.-focused.-idle { border: heavy $foreground; }
+.stage.-focused.-blocked { border: heavy $warning; }
+.stage.-focused.-live { border: heavy ansi_bright_cyan; }
+.stage.-focused.-proven { border: heavy $success; }
+.stage.-focused.-failed { border: heavy $error; }
+
+#stage-task { width: 16; }
+#stage-worker { width: 18fr; min-width: 24; }
+#stage-panel { width: 18fr; min-width: 18; }
+#stage-quorum { width: 14; }
+#stage-judge { width: 16fr; min-width: 16; }
+#stage-policy { width: 16; }
+
+.arrow {
+    width: 1;
+    height: 14;
+    content-align: center middle;
+    color: $foreground-muted;
+}
+
+#middle {
+    height: 1fr;
+}
+
+#side {
+    width: 38;
+}
+
+.list {
+    height: 1fr;
+    border: round $foreground-muted;
+    padding: 0;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+
+#evidence-scroll {
+    width: 1fr;
+    height: 100%;
+    border: round $foreground-muted;
+    padding: 0 1;
+}
+
+#log-tail {
+    height: 8;
+    border: round $foreground-muted;
+    padding: 0 1;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+
+#status {
+    height: 1;
+    padding: 0 1;
+}
+
+#keys {
+    height: 2;
+    padding: 0 1;
+    background: $boost;
+}
+
+LogScreen {
+    align: center middle;
+}
+
+#log-dialog {
+    width: 90%;
+    height: 90%;
+    border: round $accent;
+    background: $surface;
+    padding: 0 1;
+}
+
+#log-title {
+    height: 1;
+}
+
+#full-log {
+    height: 1fr;
+}
+
+#log-hint {
+    height: 1;
+}

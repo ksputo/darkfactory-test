@@ -1,0 +1,33 @@
+[project]
+name = "factory-lab"
+version = "0.1.0"
+description = "Dark Factory Workshop participant lab: a local factory built on Strands agents with a Textual UI"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "boto3>=1.43",
+    "strands-agents>=1.61",
+    "strands-agents-tools>=0.8",
+    "textual>=8.2",
+]
+
+[project.scripts]
+factory-ui = "factory_ui.app:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1",
+    "pytest-asyncio>=1.4.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = ""
+module-name = "factory_ui"
+
+[tool.pytest.ini_options]
+testpaths = ["factory_ui/tests"]
+asyncio_mode = "auto"
