@@ -124,7 +124,7 @@ class FactoryContracts(unittest.TestCase):
         self.root = Path(self.temp.name)
         self.lab = self.root / "factory-lab"
         shutil.copytree(LAB, self.lab, ignore=shutil.ignore_patterns(
-            ".git", "runs", "tests", "specs", "__pycache__", ".venv", ".kiro"))
+            ".git", "runs", "tests", "specs", "__pycache__", ".venv", ".opencode"))
         self.repo = self.root / "application"
         self.repo.mkdir()
         tools = self.root / "tools"
@@ -812,7 +812,7 @@ def main():
         required += ["reviews/judge.md", *(f"reviews/{seat}.md" for seat in SEATS)]
     missing = [name for name in required if not (LAB / name).is_file()]
     if missing:
-        print("Implement this module with Kiro CLI first. Missing: " + ", ".join(missing), file=sys.stderr)
+        print("Implement this module with OpenCode first. Missing: " + ", ".join(missing), file=sys.stderr)
         return 1
     if args.bedrock_smoke:
         return bedrock_smoke()
