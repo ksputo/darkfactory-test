@@ -62,7 +62,7 @@ def test_unknown_or_missing_tag_touches_nothing(lab, capsys, argv):
     assert snapshot(lab) == before
     assert git(lab, "stash", "list") == ""
     err = capsys.readouterr().err
-    assert ("does not exist" in err) if argv == ["03-policy"] else ("Remove the routine approval" in err)
+    assert ("does not exist" in err) if argv == ["03-policy"] else ("Let a rule decide routine runs" in err)
 
 
 def test_restore_stashes_keeps_policy_and_runs_checkpoint(lab, capfd):

@@ -28,7 +28,7 @@ TAGS = {
     "00-worker": Tag(20, "Run the worker loop", BASE_FILES),
     "01-record": Tag(30, "Save the candidate", (*BASE_FILES, "policy.json")),
     "02-gate": Tag(40, "Build the agentic gate", (*BASE_FILES, "policy.json", "reviews")),
-    "03-policy": Tag(50, "Remove the routine approval", (*BASE_FILES, "policy.json", "reviews")),
+    "03-policy": Tag(50, "Let a rule decide routine runs", (*BASE_FILES, "policy.json", "reviews")),
     "04-recovery": Tag(60, "Run and recover a task", (*BASE_FILES, "policy.json", "reviews")),
 }
 

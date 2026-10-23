@@ -121,7 +121,8 @@ class FactoryContracts(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(prefix="factory-contract-")
         self.addCleanup(self.temp.cleanup)
-        self.root = Path(self.temp.name)
+        # Resolve symlinks (macOS /var -> /private/var) so paths match what Git and the factory report.
+        self.root = Path(self.temp.name).resolve()
         self.lab = self.root / "factory-lab"
         shutil.copytree(LAB, self.lab, ignore=shutil.ignore_patterns(
             ".git", "runs", "tests", "specs", "__pycache__", ".venv", ".opencode"))
