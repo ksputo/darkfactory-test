@@ -13,6 +13,7 @@ dependencies = [
 
 [project.scripts]
 factory-ui = "factory_ui.app:main"
+catch-up = "factory_ui.catch_up:main"
 
 [dependency-groups]
 dev = [

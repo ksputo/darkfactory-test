@@ -14,6 +14,6 @@ Start the UI with `uv run factory-ui`. Every stage is dark until the command beh
 
 Read `specs/interfaces.md` with each module. Interfaces and observable behavior are fixed; internal functions and file organization can vary. Tests run copies of your factory in temporary directories with a small Git repository and local worker, checker, reviewer, judge, and Yarn substitutes. They make no model calls and do not test the actual Excalidraw feature. Use the workshop's application exercises for that.
 
-The packaged repository starts on `main` at `starter`. Completed implementations exist only in the catch-up tags. Follow the checkpoint page to restore factory files. Keep your application checkout and saved runs; catch-up does not supply or approve an Excalidraw change.
+The packaged repository starts on `main` at `starter`. Completed implementations exist only in the catch-up tags. Follow the checkpoint page to restore factory files. To catch up, run `uv run catch-up TAG`; it stashes your uncommitted changes, restores the tag's factory files, keeps your `policy.json`, and runs that module's checkpoint. Keep your application checkout and saved runs; catch-up does not supply or approve an Excalidraw change.
 
 If a checkpoint fails, give Kiro CLI the output and the module spec. Ask it to repair the implementation while retaining the supplied tests, UI, and interfaces. Run the checkpoint again before proceeding.
