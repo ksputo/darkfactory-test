@@ -1,6 +1,6 @@
 # Build your factory
 
-This starter contains module specs, application requests, a working Textual UI, and independent factory checkpoint tests. Use Kiro CLI in this directory to implement each module. The factory you build runs Strands agents on Amazon Bedrock against the separate Excalidraw checkout; it never calls Kiro CLI itself. The worker runs the application's own checks after every attempt and retries from its failures; outside the worker, back pressure comes from agents (panel, quorum, judge) and a small policy rule.
+This starter contains module specs, application requests, a working Textual UI, and independent factory checkpoint tests. Use OpenCode in this directory to implement each module. The factory you build runs Strands agents on Amazon Bedrock against the separate Excalidraw checkout; it never calls OpenCode itself. The worker runs the application's own checks after every attempt and retries from its failures; outside the worker, back pressure comes from agents (panel, quorum, judge) and a small policy rule.
 
 Start the UI with `uv run factory-ui`. Every stage is dark until the command behind it exists. The UI lights a stage when `uv run factory.py` lists its command, and colors a run green or red from the exit status of `show`. The UI computes no verdict of its own.
 
@@ -16,4 +16,4 @@ Read `specs/interfaces.md` with each module. Interfaces and observable behavior 
 
 The packaged repository starts on `main` at `starter`. Completed implementations exist only in the catch-up tags. Follow the checkpoint page to restore factory files. To catch up, run `uv run catch-up TAG`; it stashes your uncommitted changes, restores the tag's factory files, keeps your `policy.json`, and runs that module's checkpoint. Keep your application checkout and saved runs; catch-up does not supply or approve an Excalidraw change.
 
-If a checkpoint fails, give Kiro CLI the output and the module spec. Ask it to repair the implementation while retaining the supplied tests, UI, and interfaces. Run the checkpoint again before proceeding.
+If a checkpoint fails, give OpenCode the output and the module spec. Ask it to repair the implementation while retaining the supplied tests, UI, and interfaces. Run the checkpoint again before proceeding.

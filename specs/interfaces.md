@@ -4,7 +4,7 @@
 
 Build a local factory in this repository. Its worker, review panel, and judge are Strands agents that call Amazon Bedrock. The worker runs the application's own checks after every attempt and retries from the failures it caused; outside the worker, back pressure comes only from agents: the panel, the quorum they form, and the judge. Quorum, policy, and state are deterministic Python. Implement only the current module and retain earlier behavior. The guide relies on entry points, saved files, and exit codes, not on function names or internal modules.
 
-The supplied `specs/`, `tasks/`, `tests/`, `factory_ui/`, `pyproject.toml`, and `uv.lock` are inputs to the exercise. Keep the specs, the checkpoint tests, and the UI intact. Use Kiro CLI in this repository to build the factory; the factory itself never calls Kiro CLI. Excalidraw edits happen only through the factory worker. A checkpoint uses local substitutes in a temporary directory and makes no model calls. Real application checks still have to run on the actual candidate.
+The supplied `specs/`, `tasks/`, `tests/`, `factory_ui/`, `pyproject.toml`, and `uv.lock` are inputs to the exercise. Keep the specs, the checkpoint tests, and the UI intact. Use OpenCode in this repository to build the factory; the factory itself never calls OpenCode. Excalidraw edits happen only through the factory worker. A checkpoint uses local substitutes in a temporary directory and makes no model calls. Real application checks still have to run on the actual candidate.
 
 ## Project layout
 
